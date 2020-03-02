@@ -14,7 +14,7 @@ public class Solution
   
   public IList<IList<int>> QueensAttacktheKing(int[][] queens, int[] king) 
   {
-    var visited = queens.Aggregate(0L, (bvec, pos) => bvec | Mask(pos[0], pos[1]));
+    var visited = queens.Aggregate(0L, (bvec, queen) => bvec | Mask(queen[0], queen[1]));
         
     var result = new List<IList<int>>();
 
